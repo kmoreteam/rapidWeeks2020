@@ -5,15 +5,18 @@
 
 function elabora() {
 
+//    var url = 'rapidWeeks2020Test.JSON';
     var url = 'rapidWeeks2020.JSON';
-    //var url = 'https://drive.google.com/file/d/1iAHwvccaqogZtUua-umk1DaAhwjCgNuS/view?usp=sharing';
+
     $.getJSON(url,function(data){
 
         var iMatch = 0;
         for (var i in data.partite) {
             var partita = data.partite[i];
-            iMatch ++;
-            setPunti(partita.settimana, partita.win, partita.lost, iMatch);
+            if (partita.win != '') {
+                iMatch ++;
+                setPunti(partita.settimana, partita.win, partita.lost, iMatch);
+            }
         }
         
         //Ricerco elo e stampo classifica giocatori
