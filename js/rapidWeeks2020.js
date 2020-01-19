@@ -5,8 +5,8 @@
 
 function elabora() {
 
-    //var url = 'http://localhost:98/rapidWeeks2020.JSON';
-    var url = 'https://drive.google.com/file/d/1iAHwvccaqogZtUua-umk1DaAhwjCgNuS/view?usp=sharing';
+    var url = 'rapidWeeks2020.JSON';
+    //var url = 'https://drive.google.com/file/d/1iAHwvccaqogZtUua-umk1DaAhwjCgNuS/view?usp=sharing';
     $.getJSON(url,function(data){
 
         var iMatch = 0;
